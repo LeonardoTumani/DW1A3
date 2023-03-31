@@ -1,21 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desenvolvimento Web I</title>
-</head>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./Deploy/Styles/style.css" rel="stylesheet">
+        <link href="./Deploy/Styles/fonts.css" rel="stylesheet">
+
+        <title>Desenvolvimento Web I</title>
+    </head>
+
     <body>
         <header>
-            <h2>Desenvolvimento Web I</h2>
-            <h3>Leonardo Tumani</h3>
-            <h4>Links para as atividades:</h4>
-                <a href="./Atividades/A2/wireframe.png">Atividade 2 - Wireframe</a>
-                <br><a href="./Atividades/A3/Atividade3.html">Atividade 3 - Seccionamento</a>
-                <br><a href="./Atividades/A4/index.html">Atividade 4 - Landing Page</a>
-                <br><a href="./Atividades/A5/diner.html">Atividade 5 - CSS Diner</a>
-                <br><a href="./Atividades/A6/theme.html">Atividade 6 - Dark Theme</a>
+            <div id="left-header">
+                <img src="./Deploy/Components/images/gojou.png" id="logo-main">
+                <span id="nome">LeonardoTumani</span>
+            </div>      
+            
+            <div id="title">
+                <h2>Desenvolvimento</h2>
+                <h2 id="web">Web I</h2>
+            </div>
+
+            <div id="right-header">
+                <a href="https://github.com/LeonardoTumani" id="link-git">
+                    <img src="./Deploy/Components/images/github.png" id="logo-git" alt="logo github">
+                </a>
+            </div>
         </header>
+
+        <main id="page">
+            <h4>Atividades</h4>
+
+            <a href="./Atividades/A2/wireframe.png" id="a2">Atividade <span id="gr">2</span> - Wireframe</a>
+            <br><a href="./Atividades/A3/Atividade3.html" id="a3">Atividade <span id="gr">3</span> - Sections</a>
+            <br><a href="./Atividades/A4/index.html" id="a4">Atividade <span id="gr">4</span> - Landing Page</a>
+            <br><a href="./Atividades/A5/diner.html" id="a5">Atividade <span id="gr">5</span> - CSS Diner</a>
+            <br><a href="./Atividades/A6/theme.html" id="a6">Atividade <span id="gr">6</span> - Dark Theme</a>
+        </main>
+
+        <section id="footer-sec">
+            <footer>
+                <span id="footer-title">Agradecimentos</span>
+                <br> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </footer>
+        </section>
     </body>
 </html>

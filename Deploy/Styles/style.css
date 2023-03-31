@@ -1,0 +1,106 @@
+body{
+    background-color: rgb(20,22,30);
+    color: white;
+    font-family: righteous;
+    margin: auto;
+}
+
+
+
+header{
+    background-color: rgb(30,32,40);
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#left-header{
+    padding-left: 5px;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#logo-main{
+    margin-right: 10px;
+    margin-left: 10px;
+    max-height: 45px;
+    border-radius: 100px;
+    border: 1px solid rgb(50,52,60);
+}
+#nome{
+    margin-left: 5px;
+    color: rgb(150,152,160);
+    font-size: 18px;
+}
+
+
+
+#title{
+    text-align: center;
+    font-size: 15px;
+    line-height: 3px;
+    padding-left: 2px;
+}
+#web{
+    color: #5fa
+}
+
+
+
+#right-header{
+    text-align: right;
+    padding-right: 5px;
+    width: 200px;
+}
+#logo-git{
+    margin-right: 10px;
+    margin-left: 10px;
+    max-height: 45px;
+}
+
+
+
+#page{
+    text-align: center;
+    margin-bottom: 50px;
+}
+h4{
+    color: rgb(200,202,210);
+    font-size: 30px;
+}
+#page :link{
+    text-align: left;
+    margin-bottom: 10px;
+    padding: 5px;
+    color: rgb(200,202,210);
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1px solid rgb(150,152,160);
+    display: inline-block;
+    width: 250px;
+}
+#page :visited{
+    color: rgb(200,202,210);
+    border-color: rgb(150,152,160);
+}
+#gr{
+    color: #5fa;
+}
+
+
+
+#footer-sec{
+    background-color: rgb(30,32,40);
+    text-align: justify;
+    margin: auto;
+    padding: 10px;
+}
+footer{
+    margin: 40px;
+    color: rgb(150,152,160);
+}
+#footer-title{
+    color: rgb(200,202,210);
+    font-size: 30px;
+}
