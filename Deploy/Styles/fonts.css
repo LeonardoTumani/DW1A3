@@ -6,9 +6,15 @@
 }
 
 @font-face {
-    font-family: 'poppins';
-    src: url('../Components/fonts/poppins-regular-webfont.woff2') format('woff2'),
-         url('../Components/fonts/poppins-regular-webfont.woff') format('woff');
+    font-family: 'gilroy-semibold';
+    src: url('../Components/fonts/Gilroy-SemiBold.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gilroy-regular';
+    src: url('../Components/fonts/Gilroy-Regular.ttf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
