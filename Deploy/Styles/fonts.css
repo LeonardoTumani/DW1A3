@@ -1,11 +1,4 @@
 @font-face {
-    font-family: 'righteous';
-    src: url('../Components/fonts/Righteous-Regular.ttf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'gilroy-semibold';
     src: url('../Components/fonts/Gilroy-SemiBold.ttf') format('opentype');
     font-weight: normal;
