@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="./Deploy/Styles/style.css" rel="stylesheet">
         <link href="./Deploy/Styles/fonts.css" rel="stylesheet">
+        <link href="./Deploy/Styles/media.css" rel="stylesheet">
 
         <title>Desenvolvimento Web I</title>
     </head>
@@ -14,35 +15,45 @@
         <header>
             <div id="left-header">
                 <img src="./Deploy/Components/images/gojou.png" id="logo-main">
-                <span id="nome">LeonardoTumani</span>
+                <span id="link-header"><span id="nome-header">leonardotumani</span>.github.io/DW1A3</span>
             </div>      
             
-            <div id="title">
-                <h2>Desenvolvimento</h2>
-                <h2 id="web">Web I</h2>
+            <div id="center-header">
+                <span id="title-desenv">Desenvolvimento</span>
+                <span id="title-web">Web I</span>
             </div>
 
             <div id="right-header">
                 <a href="https://github.com/LeonardoTumani" id="link-git">
+                    <span id="my-github">Meu GitHub</span>
                     <img src="./Deploy/Components/images/github.png" id="logo-git" alt="logo github">
                 </a>
             </div>
         </header>
 
-        <main id="page">
-            <h4>Atividades</h4>
+        <main>
+            <h4 id="atividades">Atividades</h4>
 
-            <a href="./Atividades/A2/wireframe.png" id="a2">Atividade <span id="gr">2</span> - Wireframe</a>
-            <br><a href="./Atividades/A3/Atividade3.html" id="a3">Atividade <span id="gr">3</span> - Sections</a>
-            <br><a href="./Atividades/A4/index.html" id="a4">Atividade <span id="gr">4</span> - Landing Page</a>
-            <br><a href="./Atividades/A5/diner.html" id="a5">Atividade <span id="gr">5</span> - CSS Diner</a>
-            <br><a href="./Atividades/A6/theme.html" id="a6">Atividade <span id="gr">6</span> - Dark Theme</a>
+            <div class="ativ-container">
+                <article class="content">
+                    <a href="./Atividades/A2/wireframe.png" class="ativ">📐 Atividade <span id="num-ativ">2</span> - Wireframe</a>
+                    <br><a href="./Atividades/A3/Atividade3.html" class="ativ">🔖 Atividade <span id="num-ativ">3</span> - Sections</a>
+                    <br><a href="./Atividades/A4/index.html" class="ativ">🚀 Atividade <span id="num-ativ">4</span> - Landing Page</a>
+                    <br><a href="./Atividades/A5/diner.html" class="ativ">🍽️ Atividade <span id="num-ativ">5</span> - CSS Diner</a>
+                    <br><a href="./Atividades/A6/theme.html" class="ativ">🌓 Atividade <span id="num-ativ">6</span> - Dark Theme</a>
+                </article>
+            </div>
         </main>
 
         <section id="footer-sec">
             <footer>
-                <span id="footer-title">Agradecimentos</span>
-                <br> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                <span id="footer-title">A bee shouldn't be able to fly</span>
+                <p id="footer-text">
+                    According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyway because bees don't care what humans think is impossible.
+                    According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyway because bees don't care what humans think is impossible.
+                    According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyway because bees don't care what humans think is impossible.
+                    According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyway because bees don't care what humans think is impossible.
+                </p>
             </footer>
         </section>
     </body>

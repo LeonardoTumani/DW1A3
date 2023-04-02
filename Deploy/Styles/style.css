@@ -1,106 +1,168 @@
-body{
-    background-color: rgb(20,22,30);
-    color: white;
-    font-family: righteous;
-    margin: auto;
+/* ANIMATIONS */
+@keyframes pulse {
+    100%{
+        transform: scale(1.05);
+        background-color: #32343C;
+    }
 }
 
 
 
+/* BODY */
+html, body{
+    color: white;
+    background-color: #14161E;
+    font-family: gilroy-regular;
+    margin: auto;
+
+    /* EXTEND FOOTER */
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+body :link{
+    text-decoration: none;
+}
+
+
+
+/* HEADER */
 header{
-    background-color: rgb(30,32,40);
+    font-size: 100%;
+    height: 60px;
+    line-height: 125%;
+    background-color: #1E2028;
     display:flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
-#left-header{
-    padding-left: 5px;
-    width: 200px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-#logo-main{
-    margin-right: 10px;
-    margin-left: 10px;
-    max-height: 45px;
-    border-radius: 100px;
-    border: 1px solid rgb(50,52,60);
-}
-#nome{
-    margin-left: 5px;
-    color: rgb(150,152,160);
-    font-size: 18px;
-}
+    /* PARTE ESQUERDA DO HEADER */
+    #left-header{
+        margin-left: 10px;
+        width: 33.3%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+        #logo-main{
+            height: 30px;
+            border-radius: 100%;
+            border: 1px solid #32343C;
+        }
+        #link-header{
+            margin-left: 10px;
+            color: #9698A0;
+        }
+        #nome-header{
+            color: white;
+        }
+    /* PARTE ESQUERDA DO HEADER */
 
 
 
-#title{
+    /* PARTE CENTRAL DO HEADER */
+    #center-header{
+        height:auto;
+        font-size: 20px;
+        width: 33.3%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+        #title-web{
+            color: #5fa
+        }
+    /* PARTE CENTRAL DO HEADER */
+
+
+
+    /* PARTE DIREITA DO HEADER */
+    #right-header{
+        margin-right: 10px;
+        width: 33.3%;
+        display: flex;
+        justify-content: end;
+    }
+        #link-git{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+            #my-github{
+                margin-right: 10px;
+                color: #9698A0;
+            }
+            #logo-git{
+                height: 30px;
+            }
+    /* PARTE DIREITA DO HEADER */
+/* HEADER */
+
+
+
+/* MAIN */
+main{
     text-align: center;
-    font-size: 15px;
-    line-height: 3px;
-    padding-left: 2px;
 }
-#web{
-    color: #5fa
-}
+    #atividades{
+        color: #C8CAD2;
+        font-size: 30px;
+        line-height: 25%;
+    }
+    .ativ-container{
+        display: inline-flex;
+        flex-direction: column;
+    }
+        .content{
+            margin-bottom: 50px;
+        }
+            .content :hover{
+                animation: pulse 0.3s;
+                animation-fill-mode: forwards;
+            }
+            .content :link{
+                margin-bottom: 10px;
+                padding: 5px;
+                width: 100%;
+                border-radius: 10px;
+                flex: 0 1 auto;
+                color: #C8CAD2;
+                border: 1px solid #9698A0;
+                display: inline-block;
+                text-align: left;
+            }
+            .content :visited{
+                color: #C8CAD2;
+                border-color: #9698A0;
+            }
+            #num-ativ{
+                color: #5fa;
+            }
+/* MAIN */
 
 
 
-#right-header{
-    text-align: right;
-    padding-right: 5px;
-    width: 200px;
-}
-#logo-git{
-    margin-right: 10px;
-    margin-left: 10px;
-    max-height: 45px;
-}
-
-
-
-#page{
-    text-align: center;
-    margin-bottom: 50px;
-}
-h4{
-    color: rgb(200,202,210);
-    font-size: 30px;
-}
-#page :link{
-    text-align: left;
-    margin-bottom: 10px;
-    padding: 5px;
-    color: rgb(200,202,210);
-    text-decoration: none;
-    border-radius: 10px;
-    border: 1px solid rgb(150,152,160);
-    display: inline-block;
-    width: 250px;
-}
-#page :visited{
-    color: rgb(200,202,210);
-    border-color: rgb(150,152,160);
-}
-#gr{
-    color: #5fa;
-}
-
-
-
+/* FOOTER */
 #footer-sec{
-    background-color: rgb(30,32,40);
-    text-align: justify;
-    margin: auto;
     padding: 10px;
+    background-color: #1E2028;
+    margin: auto;
+    text-align: justify;
+
+    /* EXTEND FOOTER */
+    display: table-row;
+    height: 100%;
 }
 footer{
-    margin: 40px;
-    color: rgb(150,152,160);
+    margin: 20px;
+    color: #9698A0;
 }
 #footer-title{
-    color: rgb(200,202,210);
+    color: #C8CAD2;
     font-size: 30px;
 }
+#footer-text{
+    text-indent: 45px;
+}
+/* FOOTER */
