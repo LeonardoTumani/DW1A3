@@ -43,11 +43,11 @@ section{
   left: 0;
   background: #fff;
   min-height: 100vh;
-  padding: 80px 100px;
+  padding: 30px 30px;
 }
  
 section img{
-  max-width: 500px;
+  max-width: 400px;
   float: left;
   margin: 10px 20px 10px 0;
   filter: inherit;

@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'gilroy-semibold';
+    src: url('../Components/fonts/Gilroy-SemiBold.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gilroy-regular';
+    src: url('../Components/fonts/Gilroy-Regular.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}

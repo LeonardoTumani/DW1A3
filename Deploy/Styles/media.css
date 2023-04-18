@@ -20,4 +20,13 @@
     #right-header{
         display: none;
     }
+
+
+
+    main{
+        flex-direction: column;
+    }
+    .section-main{
+        width: 100%;
+    }
 }
