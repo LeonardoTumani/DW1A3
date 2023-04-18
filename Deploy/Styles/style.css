@@ -104,13 +104,22 @@ header{
 /* MAIN */
 main{
     text-align: center;
+    display: flex;
+    flex-direction: row;
 }
-    #atividades{
+    .section-main{
+        width: 50%;
+    }
+    #titulo-main{
         color: #C8CAD2;
         font-size: 30px;
         line-height: 25%;
     }
     .ativ-container{
+        display: inline-flex;
+        flex-direction: column;
+    }
+    .trab-container{
         display: inline-flex;
         flex-direction: column;
     }
@@ -136,7 +145,7 @@ main{
                 color: #C8CAD2;
                 border-color: #9698A0;
             }
-            #num-ativ{
+            .ativ-span{
                 color: #5fa;
             }
 /* MAIN */
@@ -161,6 +170,7 @@ footer{
 #footer-title{
     color: #C8CAD2;
     font-size: 30px;
+
 }
 #footer-text{
     text-indent: 45px;
