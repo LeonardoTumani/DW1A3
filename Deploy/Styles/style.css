@@ -1,6 +1,6 @@
 /* ANIMATIONS */
 @keyframes pulse {
-    100%{
+    100% {
         transform: scale(1.05);
         background-color: #32343C;
     }
@@ -9,7 +9,8 @@
 
 
 /* BODY */
-html, body{
+html,
+body {
     color: white;
     background-color: #14161E;
     font-family: gilroy-regular;
@@ -20,140 +21,164 @@ html, body{
     height: 100%;
     width: 100%;
 }
-body :link{
+
+body :link {
     text-decoration: none;
 }
 
 
 
 /* HEADER */
-header{
+header {
     font-size: 100%;
     height: 60px;
     line-height: 125%;
     background-color: #1E2028;
-    display:flex;
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
-    /* PARTE ESQUERDA DO HEADER */
-    #left-header{
-        margin-left: 10px;
-        width: 33.3%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-        #logo-main{
-            height: 30px;
-            border-radius: 100%;
-            border: 1px solid #32343C;
-        }
-        #link-header{
-            margin-left: 10px;
-            color: #9698A0;
-        }
-        #nome-header{
-            color: white;
-        }
-    /* PARTE ESQUERDA DO HEADER */
+
+/* PARTE ESQUERDA DO HEADER */
+#left-header {
+    margin-left: 10px;
+    width: 33.3%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#logo-main {
+    height: 30px;
+    border-radius: 100%;
+    border: 1px solid #32343C;
+}
+
+#link-header {
+    margin-left: 10px;
+    color: #9698A0;
+}
+
+#nome-header {
+    color: white;
+}
+
+/* PARTE ESQUERDA DO HEADER */
 
 
 
-    /* PARTE CENTRAL DO HEADER */
-    #center-header{
-        height:auto;
-        font-size: 20px;
-        width: 33.3%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-        #title-web{
-            color: #5fa
-        }
-    /* PARTE CENTRAL DO HEADER */
+/* PARTE CENTRAL DO HEADER */
+#center-header {
+    height: auto;
+    font-size: 20px;
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title-web {
+    color: #5fa
+}
+
+/* PARTE CENTRAL DO HEADER */
 
 
 
-    /* PARTE DIREITA DO HEADER */
-    #right-header{
-        margin-right: 10px;
-        width: 33.3%;
-        display: flex;
-        justify-content: end;
-    }
-        #link-git{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
-            #my-github{
-                margin-right: 10px;
-                color: #9698A0;
-            }
-            #logo-git{
-                height: 30px;
-            }
-    /* PARTE DIREITA DO HEADER */
+/* PARTE DIREITA DO HEADER */
+#right-header {
+    margin-right: 10px;
+    width: 33.3%;
+    display: flex;
+    justify-content: end;
+}
+
+#link-git {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#my-github {
+    margin-right: 10px;
+    color: #9698A0;
+}
+
+#logo-git {
+    height: 30px;
+}
+
+/* PARTE DIREITA DO HEADER */
 /* HEADER */
 
 
 
 /* MAIN */
-main{
+main {
     text-align: center;
     display: flex;
     flex-direction: row;
+    width: 66.6%;
+    margin-left: 16.6%;
 }
-    .section-main{
-        width: 50%;
-    }
-    #titulo-main{
-        color: #C8CAD2;
-        font-size: 30px;
-        line-height: 25%;
-    }
-    .ativ-container{
-        display: inline-flex;
-        flex-direction: column;
-    }
-    .trab-container{
-        display: inline-flex;
-        flex-direction: column;
-    }
-        .content{
-            margin-bottom: 50px;
-        }
-            .content :hover{
-                animation: pulse 0.3s;
-                animation-fill-mode: forwards;
-            }
-            .content :link{
-                margin-bottom: 10px;
-                padding: 5px;
-                width: 100%;
-                border-radius: 10px;
-                flex: 0 1 auto;
-                color: #C8CAD2;
-                border: 1px solid #9698A0;
-                display: inline-block;
-                text-align: left;
-            }
-            .content :visited{
-                color: #C8CAD2;
-                border-color: #9698A0;
-            }
-            .ativ-span{
-                color: #5fa;
-            }
+
+.section-main {
+    width: 50%;
+}
+
+#titulo-main {
+    color: #C8CAD2;
+    font-size: 30px;
+    line-height: 25%;
+}
+
+.ativ-container {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.trab-container {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.content {
+    margin-bottom: 50px;
+}
+
+.content :hover {
+    animation: pulse 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.content :link {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+    border-radius: 10px;
+    flex: 0 1 auto;
+    color: #C8CAD2;
+    border: 1px solid #9698A0;
+    display: inline-block;
+    text-align: left;
+}
+
+.content :visited {
+    color: #C8CAD2;
+    border-color: #9698A0;
+}
+
+.ativ-span {
+    color: #5fa;
+}
+
 /* MAIN */
 
 
 
 /* FOOTER */
-#footer-sec{
+#footer-sec {
     padding: 10px;
     background-color: #1E2028;
     margin: auto;
@@ -163,16 +188,20 @@ main{
     display: table-row;
     height: 100%;
 }
-footer{
+
+footer {
     margin: 20px;
     color: #9698A0;
 }
-#footer-title{
+
+#footer-title {
     color: #C8CAD2;
     font-size: 30px;
 
 }
-#footer-text{
+
+#footer-text {
     text-indent: 45px;
 }
+
 /* FOOTER */
