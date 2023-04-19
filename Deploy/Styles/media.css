@@ -33,4 +33,8 @@
     .section-main {
         width: 100%;
     }
+
+    #article-ativ {
+        margin-bottom: 0px;
+    }
 }
