@@ -1,0 +1,16 @@
+article{
+    color:#3636e9
+}
+
+span{
+    color:black
+}
+
+div{
+    margin: 20px;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+}
