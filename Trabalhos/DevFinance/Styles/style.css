@@ -253,11 +253,13 @@ input {
     border-radius: var(--border-radius);
     padding: 0.8rem;
     width: 100%;
+    max-width: 500px;   
 }
 
 .input-group {
     margin-top: 0.8rem;
     width: 100%;
+    max-width: 500px;
 }
 
 .input-group small {
