@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,6 @@
     </header>
 
     <main class="container">
-
         <section id="balance">
             <h2 class="sr-only">Balanço</h2>
 
@@ -26,7 +25,7 @@
                     <span>Entradas</span>
                     <img src="./Components/images/honeycomb-income.png" class="icon" alt="income image">
                 </h3>
-                <p id="income_value">R$ 5.000,00</p>
+                <p id="incomeDisplay">R$ 0,00</p>
             </div>
 
             <div class="card">
@@ -34,7 +33,7 @@
                     <span>Saídas</span>
                     <img src="./Components/images/honeycomb-expense.png" class="icon" alt="expense image">
                 </h3>
-                <p id="expense_value">R$ 2.000,00</p>
+                <p id="expenseDisplay">R$ 0,00</p>
             </div>
 
             <div class="card total">
@@ -42,14 +41,14 @@
                     <span>Total</span>
                     <img src="./Components/images/honeycomb.png" class="icon" alt="total image">
                 </h3>
-                <p id="total_value">R$ 3.000,00</p>
+                <p id="totalDisplay">R$ 0,00</p>
             </div>
         </section>
 
         <section id="transaction">
             <h2 class="sr-only">Transações</h2>
 
-            <a href="#" class="button new" id="new-transaction">+ Nova Transação</a>
+            <a href="#" onclick="Modal.open()" class="button new">+ Nova Transação</a>
 
             <table id="data-table">
                 <thead>
@@ -61,29 +60,40 @@
                     </tr>
                 </thead>
                 <tbody>
-
                 </tbody>
             </table>
         </section>
-
     </main>
 
     <div class="modal-overlay">
         <div class="modal">
             <div id="form">
                 <h2>🐝 Nova Transação</h2>
-                <form action="">
-
+                <form action="" onsubmit="Form.submit(event)">
                     <div class="input-group">
-                        <label class="sr-only" for="description">Descrição</label>
-                        <input type="text" id="description" name="description" placeholder="Descrição">
+                        <label
+                            class="sr-only"
+                            for="description">Descrição</label>
+                        <input
+                            type="text"
+                            id="description"
+                            name="description"
+                            placeholder="Descrição"
+                        />
                     </div>
 
                     <div class="input-group">
-                        <label class="sr-only" for="amount">Valor</label>
-                        <input type="number" step="0.01" id="amount" name="amount" placeholder="0,00">
-                        <small class="help">Use o sinal negativo para despesas e vírgula para casas
-                            decimais.</small>
+                        <label
+                                class="sr-only"
+                                for="amount">Valor</label>
+                        <input
+                                type="number"
+                                step="0.01"
+                                id="amount"
+                                name="amount"
+                                placeholder="0,00"
+                        />
+                        <small class="help">Use o sinal negativo para despesas e vírgula para casas decimais.</small>
                     </div>
 
                     <div class="input-group">
@@ -91,8 +101,8 @@
                         <input type="date" id="date" name="date" placeholder="00/00/0000">
                     </div>
 
-                    <div class="input-group actions" id="cancel-new-transaction">
-                        <a href="#" class="button cancel">Cancelar</a>
+                    <div class="input-group actions">
+                        <a href="#" onclick="Modal.close()" class="button cancel">Cancelar</a>
                         <button class="button save">Salvar</button>
                     </div>
 

@@ -63,52 +63,54 @@ const Transaction = {
 }
 
 const DOM = {
-
     transactionsContainer: document.querySelector('#data-table tbody'),
 
+    addTransaction(transaction, index){
+        const tr = document.createElement('tr')
+        tr.innerHTML = DOM.innerHTMLTransaction(transaction, index)
+        tr.dataset.index = index
 
-    addTransaction: (transaction, index) => {
+        DOM.transactionsContainer.appendChild(tr)
 
-        const tr = document.createElement('tr');
-        tr.innerHTML = DOM.innerHTMLTransaction(transaction, index);
-        tr.dataset.index = index;
-        DOM.transactionsContainer.appendChild(tr);
     },
 
-    innerHTMLTransaction: (transaction, index) => {
-        const style = transaction.amount > 0 ? 'income' : 'expense';
+    innerHTMLTransaction(transaction, index){
+        const CSSclass = transaction.amount > 0 ? "income" : "expense"
 
-        const amount = Utils.formatCurrency(transaction.amount);
+        const amount = Utils.formatCurrency(transaction.amount)
 
-        const html = `        
-            <td class="description">${transaction.description}</td>
-            <td class="${style}">${amount}</td>
-            <td class="date">${transaction.date}</td>
-            <td>
-                <img onclick="Transaction.remove(${index})" src="./Components/images/honeycomb-remove.png" 
-                class="icon" id="honeycomb-remove" alt="remove transaction">
-            </td>        
+        const html = `
+             <td class="description">${transaction.description}</td>
+             <td class="${CSSclass}">${amount}</td>
+             <td class="date">${transaction.date}</td>
+             <td>
+                <img onclick="Transaction.remove(${index})" class="icon" id="honeycomb-remove"
+                src="./Components/images/honeycomb-remove.png" alt="Remover Transação">
+             </td>
         `
-
-        return html;
+        return html
     },
 
     updateBalance: () => {
         const totalGreen = '#12a454';
         const totalRed = '#e92929';
 
-        document.getElementById('income_value').innerHTML = Utils.formatCurrency(Transaction.incomes());
-        document.getElementById('expense_value').innerHTML = Utils.formatCurrency(Transaction.expenses());
-        document.getElementById('total_value').innerHTML = Utils.formatCurrency(Transaction.total());
+        document.getElementById('incomeDisplay').innerHTML = Utils.formatCurrency(Transaction.incomes());
+        document.getElementById('expenseDisplay').innerHTML = Utils.formatCurrency(Transaction.expenses());
+        document.getElementById('totalDisplay').innerHTML = Utils.formatCurrency(Transaction.total());
 
-        let totalValue = Transaction.total();
-        Number(totalValue) >= 0 ? document.querySelector('.card.total').style.background = totalGreen
-            : document.querySelector('.card.total').style.background = totalRed;
-
+        if (Transaction.total() < 0) {
+            document.querySelector('.total').style.backgroundColor = totalRed;
+        }
+        
+        else {
+            document.querySelector('.total').style.backgroundColor = totalGreen;
+        }
+    
     },
 
-    clearTransactions: () => {
-        DOM.transactionsContainer.innerHTML = '';
+    clearTransactions() {
+        DOM.transactionsContainer.innerHTML = ""
     }
 }
 
@@ -194,7 +196,9 @@ const Form = {
             Transaction.add(transaction)
             Form.clearFields()
             Modal.close()
-        } catch (error) {
+        } 
+        
+        catch (error) {
                alert(error.message)
         }
     }
@@ -210,8 +214,8 @@ const App = {
        DOM.updateBalance()
 
        Storage.set(Transaction.all)
-
     },
+    
     reload() {
         DOM.clearTransactions()
         App.init()
@@ -219,4 +223,3 @@ const App = {
 }
 
 App.init()
-

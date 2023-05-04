@@ -82,6 +82,10 @@ a:hover {
     cursor: pointer;
 }
 
+.button {
+    background: var(--white);
+}
+
 .button.new {
     display: inline-block;
     margin-bottom: .8rem;
