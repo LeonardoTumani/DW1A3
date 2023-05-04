@@ -258,6 +258,7 @@ input {
 .input-group {
     padding: 0.8rem 0 0.8rem 0.8rem;
     margin-top: 0.8rem;
+    width: 100%;
 }
 
 .input-group small {
