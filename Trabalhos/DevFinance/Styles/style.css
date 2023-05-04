@@ -233,7 +233,6 @@ td.expense {
 
 .modal {
     background: var(--white);
-    padding: 2.4rem;
     border-radius: var(--border-radius);
     position: relative;
     z-index: 1;
@@ -258,6 +257,7 @@ input {
 .input-group {
     padding: 0.8rem 0 0.8rem 0.8rem;
     margin-top: 0.8rem;
+    margin-right: 0.8rem;
     width: 100%;
 }
 
