@@ -256,7 +256,7 @@ input {
 }
 
 .input-group {
-    padding: 0.8rem 0 0.8rem 0.8rem;
+    padding: 0.8rem;
     margin-top: 0.8rem;
     width: 100%;
 }
@@ -280,7 +280,7 @@ input {
 footer {
     text-align: center;
     padding: 4rem 0 2rem;
-    color: var(--yellow);
+    color: var(--gray);
     opacity: 0.6;
     font-weight: bold;
 }
