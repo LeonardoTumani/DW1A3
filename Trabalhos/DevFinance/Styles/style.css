@@ -164,7 +164,7 @@ a:hover {
 #data-table {
     width: 100%;
     border-spacing: 0 0.5rem;
-    color: var(--dark-yellow);
+    color: var(--yellow);
 }
 
 table thead tr th:first-child,
@@ -223,7 +223,7 @@ td.expense {
     justify-content: center;
     opacity: 0;
     visibility: hidden;
-    z-index: 999;
+    z-index: 2;
 }
 
 .modal-overlay.active {
@@ -241,6 +241,7 @@ td.expense {
 
 #form {
     max-width: 500px;
+    margin-right
 }
 
 #form h2 {
@@ -256,10 +257,11 @@ input {
 
 .input-group {
     margin-top: 0.8rem;
+    width: 100%;
 }
 
 .input-group small {
-    opacity: 0.4;
+    opacity: 0.6;
 }
 
 .input-group.actions {
@@ -268,9 +270,9 @@ input {
     align-items: center;
 }
 
-.input-group.actions .button,
-.input-group.actions button {
-    width: 48%;
+.input-group.actions .button.cancel,
+.input-group.actions .button.save {
+    width: 50%;
 }
 
 footer {
@@ -283,7 +285,7 @@ footer {
 
 @media (min-width: 800px) {
     html {
-        font-size: 87.5%;
+        font-size: 90%;
     }
 
     #balance {
