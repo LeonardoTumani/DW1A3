@@ -274,7 +274,6 @@ input {
 .input-group.actions .button.cancel,
 .input-group.actions .button.save {
     width: 48%;
-    background: var(--white);
 }
 
 footer {
