@@ -89,11 +89,6 @@ a:hover {
     padding: 0;
 }
 
-.button.new {
-    display: inline-block;
-    margin-bottom: .8rem;
-}
-
 .button.save {
     color: var(--black);
     border: 2px var(--black) solid;
