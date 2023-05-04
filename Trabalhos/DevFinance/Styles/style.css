@@ -1,12 +1,12 @@
 :root {
     --border-radius: 0.8rem;
-    --whitest: #fff;
-    --white: #f0f2f5;
+    --whitest: #fafcff;
+    --white: #eaecef;
     --yellow: #fcbf17;
-    --black: #1f1f1f;
+    --black: #1a1c1f;
     --green: #12a454;
     --red: #e92929;
-    --gray: #857d6f;
+    --gray: #8a8c8f;
 }
 
 * {
@@ -79,6 +79,7 @@ a {
 
 a:hover {
     color: var(--gray);
+    cursor: pointer;
 }
 
 .button.new {
@@ -100,6 +101,7 @@ a:hover {
 .button.save:hover {
     background-color: var(--black);
     color: var(--white);
+    cursor: pointer;
 }
 
 .button.cancel {
@@ -116,6 +118,7 @@ a:hover {
 .button.cancel:hover {
     background-color: var(--red);
     color: var(--white);
+    cursor: pointer;
 }
 
 #balance {
@@ -128,7 +131,7 @@ a:hover {
 }
 
 .card {
-    background: #fff;
+    background: var(--whitest);
     padding: 2rem 2rem;
     border-radius: var(--border-radius);
     margin-bottom: 2rem;
@@ -150,7 +153,7 @@ a:hover {
 }
 
 .card.total {
-    background: var(--total);
+    background: var(--black);
     color: var(--white);
 }
 
@@ -162,7 +165,7 @@ a:hover {
 #data-table {
     width: 100%;
     border-spacing: 0 0.5rem;
-    color: var(--dark-yellow);
+    color: var(--black);
 }
 
 table thead tr th:first-child,
@@ -176,7 +179,7 @@ table tbody tr td:last-child {
 }
 
 table th {
-    background: #fff;
+    background: var(--whitest);
     font-weight: normal;
     padding: 1rem 2rem;
     text-align: left;
@@ -193,21 +196,21 @@ table tbody tr:hover {
 }
 
 table td {
-    background: #fff;
+    background: var(--whitest);
     padding: 1rem 2rem;
     font-weight: normal;
 }
 
 td.description {
-    color: var(--dark-yellow)
+    color: var(--black)
 }
 
 td.income {
-    color: var(--income-color);
+    color: var(--green);
 }
 
 td.expense {
-    color: var(--expense-color);
+    color: var(--red);
 }
 
 .modal-overlay {
@@ -257,7 +260,7 @@ input {
 }
 
 .input-group small {
-    opacity: 0.4;
+    opacity: 0.6;
 }
 
 .input-group.actions {
@@ -266,22 +269,22 @@ input {
     align-items: center;
 }
 
-.input-group.actions .button,
-.input-group.actions button {
+.input-group.actions .button.cancel,
+.input-group.actions .button.save {
     width: 48%;
 }
 
 footer {
     text-align: center;
     padding: 4rem 0 2rem;
-    color: var(--dark-yellow);
+    color: var(--yellow);
     opacity: 0.6;
     font-weight: bold;
 }
 
 @media (min-width: 800px) {
     html {
-        font-size: 87.5%;
+        font-size: 90%;
     }
 
     #balance {
