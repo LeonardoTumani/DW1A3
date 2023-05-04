@@ -1,12 +1,12 @@
 :root {
     --border-radius: 0.8rem;
-    --whitest: #fff;
-    --white: #f0f2f5;
+    --whitest: #fafcff;
+    --white: #eaecef;
     --yellow: #fcbf17;
-    --black: #1f1f1f;
+    --black: #1a1c1f;
     --green: #12a454;
     --red: #e92929;
-    --gray: #808285;
+    --gray: #8a8c8f;
 }
 
 * {
@@ -79,6 +79,7 @@ a {
 
 a:hover {
     color: var(--gray);
+    cursor: pointer;
 }
 
 .button.new {
@@ -130,7 +131,7 @@ a:hover {
 }
 
 .card {
-    background: #fff;
+    background: var(--whitest);
     padding: 2rem 2rem;
     border-radius: var(--border-radius);
     margin-bottom: 2rem;
@@ -178,7 +179,7 @@ table tbody tr td:last-child {
 }
 
 table th {
-    background: #fff;
+    background: var(--whitest);
     font-weight: normal;
     padding: 1rem 2rem;
     text-align: left;
@@ -195,13 +196,13 @@ table tbody tr:hover {
 }
 
 table td {
-    background: #fff;
+    background: var(--whitest);
     padding: 1rem 2rem;
     font-weight: normal;
 }
 
 td.description {
-    color: var(--gray)
+    color: var(--black)
 }
 
 td.income {
@@ -223,7 +224,7 @@ td.expense {
     justify-content: center;
     opacity: 0;
     visibility: hidden;
-    z-index: 2;
+    z-index: 999;
 }
 
 .modal-overlay.active {
@@ -233,14 +234,14 @@ td.expense {
 
 .modal {
     background: var(--white);
+    padding: 2.4rem;
     border-radius: var(--border-radius);
     position: relative;
     z-index: 1;
 }
 
 #form {
-    width: 500px;
-    margin: 50px;
+    max-width: 500px;
 }
 
 #form h2 {
@@ -250,15 +251,12 @@ td.expense {
 input {
     border: none;
     border-radius: var(--border-radius);
-    height: 100%;
-    max-width: 500px;
+    padding: 0.8rem;
+    width: 100%;
 }
 
 .input-group {
-    padding: 0.8rem 0 0.8rem 0.8rem;
     margin-top: 0.8rem;
-    margin-right: 0.8rem;
-    width: 100%;
 }
 
 .input-group small {
@@ -269,7 +267,6 @@ input {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 50%;
 }
 
 .input-group.actions .button.cancel,
@@ -280,7 +277,7 @@ input {
 footer {
     text-align: center;
     padding: 4rem 0 2rem;
-    color: var(--gray);
+    color: var(--yellow);
     opacity: 0.6;
     font-weight: bold;
 }
