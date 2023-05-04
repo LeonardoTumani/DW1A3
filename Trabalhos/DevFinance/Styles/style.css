@@ -150,7 +150,7 @@ a:hover {
 }
 
 .card.total {
-    background: var(--total);
+    background: var(--black);
     color: var(--white);
 }
 
@@ -199,15 +199,15 @@ table td {
 }
 
 td.description {
-    color: var(--dark-yellow)
+    color: var(--gray)
 }
 
 td.income {
-    color: var(--income-color);
+    color: var(--green);
 }
 
 td.expense {
-    color: var(--expense-color);
+    color: var(--red);
 }
 
 .modal-overlay {
