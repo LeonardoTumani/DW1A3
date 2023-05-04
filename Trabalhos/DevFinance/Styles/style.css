@@ -164,7 +164,7 @@ a:hover {
 #data-table {
     width: 100%;
     border-spacing: 0 0.5rem;
-    color: var(--yellow);
+    color: var(--black);
 }
 
 table thead tr th:first-child,
@@ -272,7 +272,7 @@ input {
 
 .input-group.actions .button.cancel,
 .input-group.actions .button.save {
-    width: 50%;
+    width: 48%;
 }
 
 footer {
