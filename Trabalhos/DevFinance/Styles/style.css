@@ -240,7 +240,7 @@ td.expense {
 }
 
 #form {
-    max-width: 500px;
+    width: 500px;
     margin: 50px;
 }
 
@@ -251,12 +251,12 @@ td.expense {
 input {
     border: none;
     border-radius: var(--border-radius);
-    width: 100%;
+    height: 100%;
     max-width: 500px;
 }
 
 .input-group {
-    padding: 0.8rem;
+    padding: 0.8rem 0 0.8rem 0.8rem;
     margin-top: 0.8rem;
     width: 100%;
 }
@@ -269,7 +269,7 @@ input {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 50%;
 }
 
 .input-group.actions .button.cancel,
