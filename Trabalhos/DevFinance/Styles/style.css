@@ -274,7 +274,7 @@ input {
 footer {
     text-align: center;
     padding: 4rem 0 2rem;
-    color: var(--dark-yellow);
+    color: var(--yellow);
     opacity: 0.6;
     font-weight: bold;
 }
