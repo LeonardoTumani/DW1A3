@@ -92,19 +92,22 @@ const DOM = {
     },
 
     updateBalance: () => {
-        const totalGreen = '#12a454';
-        const totalRed = '#e92929';
+        const green = '#12a454';
+        const red = '#e92929';
+        const whitest = '#fafcff'
 
         document.getElementById('incomeDisplay').innerHTML = Utils.formatCurrency(Transaction.incomes());
         document.getElementById('expenseDisplay').innerHTML = Utils.formatCurrency(Transaction.expenses());
         document.getElementById('totalDisplay').innerHTML = Utils.formatCurrency(Transaction.total());
 
-        if (Transaction.total() < 0) {
-            document.querySelector('.total').style.backgroundColor = totalRed;
+        if (Transaction.total() > 0) {
+            document.querySelector('.total').style.backgroundColor = green;
+            document.querySelector('.total').style.color = whitest;
         }
         
         else {
-            document.querySelector('.total').style.backgroundColor = totalGreen;
+            document.querySelector('.total').style.backgroundColor = red;
+            document.querySelector('.total').style.color = whitest;
         }
     
     },
