@@ -13,34 +13,60 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html {
-    font-size: 90%;
+    font-family: gilroy-regular;
+    font-weight: 1;
 }
 
 body {
     background: var(--white);
-    font-family: gilroy-regular;
 }
 
 header {
     background: var(--black);
     padding: 2rem 0 10rem;
-    text-align: center;
+    justify-content: center;
+    display: flex;
 }
 
-#bee-finance {
+h1 {
     color: var(--white);
 }
 
-#logo {
-    color: var(--black);
-    font-weight: bold;
+.bf-mark {
+    display: flex;
+    align-items: center;
+}
+
+#bf-mark-header {
+    font-size: 15px;
+}
+
+#bf-mark-modal {
+    font-size: 15px;
+}
+
+#bf-mark-footer {
+    font-size: 15px;
 }
 
 .icon {
-    max-width: 40px;
+    max-width: 45px;
+}
+
+.icon-bee {
+    margin-right: 10px;
+}
+
+#icon-bee-header {
+    max-height: 30px;
+}
+
+#icon-bee-modal {
+    max-height: 25px;
+}
+
+#icon-bee-footer {
+    max-height: 20px;
 }
 
 #honeycomb-remove:hover {
@@ -62,13 +88,6 @@ header {
 .container {
     width: min(90vw, 800px);
     margin: auto;
-}
-
-h2 {
-    margin-top: 3.2rem;
-    margin-bottom: 0.8rem;
-    color: var(--black);
-    font-weight: normal;
 }
 
 a {
@@ -139,7 +158,6 @@ a:hover {
 }
 
 .card h3 {
-    font-weight: normal;
     font-size: 1rem;
     display: flex;
     align-items: center;
@@ -180,7 +198,6 @@ table tbody tr td:last-child {
 
 table th {
     background: var(--whitest);
-    font-weight: normal;
     padding: 1rem 2rem;
     text-align: left;
 }
@@ -198,7 +215,6 @@ table tbody tr:hover {
 table td {
     background: var(--whitest);
     padding: 1rem 2rem;
-    font-weight: normal;
 }
 
 td.description {
@@ -250,6 +266,7 @@ td.remove-icon {
 
 #form h2 {
     margin-top: 0;
+    font-size: normal;
 }
 
 input {
@@ -276,14 +293,14 @@ input {
 .input-group.actions .button.cancel,
 .input-group.actions .button.save {
     width: 48%;
+    font-size: 14px;
 }
 
 footer {
-    text-align: center;
     padding: 4rem 0 2rem;
     color: var(--yellow);
-    opacity: 0.6;
-    font-weight: bold;
+    justify-content: center;
+    display: flex;
 }
 
 @media (min-width: 800px) {

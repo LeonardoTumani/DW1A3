@@ -7,13 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Styles/style.css">
     <link rel="stylesheet" href="./Styles/fonts.css">
-    <title>🐝 bee.finance</title>
+    <link rel="icon" href="./Components/images/bee.png">
+    <title>bee.finance</title>
 </head>
 
 <body>
 
     <header>
-        <h1 id="bee-finance">🐝 bee.finance</h1>
+        <div class="bf-mark" id="bf-mark-header">
+            <img src="./Components/images/bee.png" class="icon-bee" id="icon-bee-header" alt="bee image">
+            <h1 id="bee-finance">bee.finance</h1>
+        </div>
     </header>
 
     <main class="container">
@@ -68,7 +72,11 @@
     <div class="modal-overlay">
         <div class="modal">
             <div id="form">
-                <h2>🐝 Nova Transação</h2>
+                <div class="bf-mark" id="bf-mark-modal">
+                    <img src="./Components/images/bee.png" class="icon-bee" id="icon-bee-modal" alt="bee image">
+                    <h2 id="bee-finance">Nova transação</h2>
+                </div>
+
                 <form action="" onsubmit="Form.submit(event)">
                     <div class="input-group">
                         <label
@@ -111,8 +119,11 @@
         </div>
     </div>
 
-    <footer>
-        <p>🐝 bee.finance</p>
+    <footer class>
+        <div class="bf-mark" id="bf-mark-footer">
+            <img src="./Components/images/bee.png" class="icon-bee" id="icon-bee-footer" alt="bee image">
+            <p id="bee-finance">bee.finance</p>
+        </div>
     </footer>
 
     <script src="./Components/script.js"></script>
