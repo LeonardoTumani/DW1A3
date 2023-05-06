@@ -40,7 +40,7 @@ header {
 }
 
 .icon {
-    max-width: 50px;
+    max-width: 40px;
 }
 
 #honeycomb-remove:hover {
@@ -84,7 +84,7 @@ a:hover {
 
 .button {
     width: 100%;
-    height: 50px;
+    height: 40px;
     background: var(--white);
     padding: 0;
 }
@@ -93,7 +93,6 @@ a:hover {
     color: var(--black);
     border: 2px var(--black) solid;
     border-radius: var(--border-radius);
-    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,7 +109,6 @@ a:hover {
     color: var(--red);
     border: 2px var(--red) solid;
     border-radius: var(--border-radius);
-    height: 46px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -213,6 +211,10 @@ td.income {
 
 td.expense {
     color: var(--red);
+}
+
+td.remove-icon {
+    text-align: end;
 }
 
 .modal-overlay {

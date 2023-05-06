@@ -83,7 +83,7 @@ const DOM = {
              <td class="description">${transaction.description}</td>
              <td class="${CSSclass}">${amount}</td>
              <td class="date">${transaction.date}</td>
-             <td>
+             <td class="remove-icon">
                 <img onclick="Transaction.remove(${index})" class="icon" id="honeycomb-remove"
                 src="./Components/images/honeycomb-remove.png" alt="Remover Transação">
              </td>
