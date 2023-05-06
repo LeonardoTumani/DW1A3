@@ -171,8 +171,8 @@ a:hover {
 }
 
 .card.total {
-    background: var(--black);
-    color: var(--white);
+    background: var(--white);
+    color: var(--black);
 }
 
 #transaction {
