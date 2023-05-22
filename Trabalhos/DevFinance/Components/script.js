@@ -100,7 +100,7 @@ const DOM = {
         document.getElementById('expenseDisplay').innerHTML = Utils.formatCurrency(Transaction.expenses());
         document.getElementById('totalDisplay').innerHTML = Utils.formatCurrency(Transaction.total());
 
-        if (Transaction.total() > 0) {
+        if (Transaction.total() >= 0) {
             document.querySelector('.total').style.backgroundColor = green;
             document.querySelector('.total').style.color = whitest;
         }
