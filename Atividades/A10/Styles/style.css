@@ -1,0 +1,61 @@
+:root {
+    --border-radius: 0.3rem;
+    --whitest: #fafcff;
+    --white: #eaecef;
+    --yellow: #fcbf17;
+    --black: #1a1c1f;
+    --blackest: #0a0c0f;
+    --green: #12a454;
+    --red: #e92929;
+    --light-red: #ffcece;
+    --gray: #8a8c8f;
+}
+
+* {
+    font-family: gilroy-regular;
+    font-weight: 1;
+}
+
+body {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.input-div {
+    margin-bottom: 20px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 350px;
+    border-radius: var(--border-radius);
+    border: solid 1px var(--gray);
+    transition: all 0.5s ease;
+}
+
+button {
+    width: 75px;
+    border-radius: var(--border-radius);
+    border: solid 1px var(--gray);
+    transition: all 0.5s ease;;
+}
+
+label {
+    display: block;
+}
+
+.errorInput {
+    border-color: var(--red) !important;
+    background-color: var(--light-red) !important;
+}
