@@ -1,5 +1,5 @@
 const masks = {
-    name(value) {
+    name (value) {
         return value
         .replace(/[^A-ü ]+/g, '')
         .replace(/([A-ü ]{50})[A-ü ]+?$/, '$1')
@@ -35,7 +35,7 @@ const masks = {
         .replace(/(-\d{4})\d+?$/, '$1')
     },
 
-    money(value) {
+    money (value) {
         const cleanValue = +value.replace(/\D+/g, '').substring(0, 11);
         const options = { style: 'currency', currency: 'BRL' };
         return new Intl.NumberFormat('pt-br', options).format(parseInt(cleanValue) / 100);
@@ -89,7 +89,7 @@ button.addEventListener('click', (event) => {
         elemPhone.classList.remove('errorInput')
     }
 
-    if (elemMoney.value == "") {
+    if (elemMoney.value == "" | elemMoney.value == "R$ 0,00") {
         elemMoney.classList.add('errorInput')
     }
     else {

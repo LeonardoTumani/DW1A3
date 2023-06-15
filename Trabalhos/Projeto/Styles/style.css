@@ -1,0 +1,127 @@
+:root {
+    --fill-color: #e98b37;
+    --border-color: #ffbd59;
+    --border-radius: 5px;
+    --border-type: outset;
+    --color1: black;
+    --color2: #b10000;
+}
+
+* {
+    user-select: none;
+    font-family: xpix;
+    font-weight: 1;
+    font-weight: 1000;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+#modal-div {
+    justify-content: center;
+}
+
+p {
+    margin: 0;
+}
+
+#p1 {
+    color: var(--color2);
+    font-size: 50px;
+}
+
+span {
+    color: var(--color2);
+}
+
+#screen {
+    background-image: url('../Components/images/background.png');
+    background-size: 300px;
+    height: 100%;
+    width: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-screen.active, .restart-screen.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.start-screen, .restart-screen {
+    background-color: var(--fill-color);
+    border-color: var(--border-color);
+    color: var(--color);
+
+    font-size: 30px;
+
+    border-radius: 15px;
+    border: var(--border-radius) var(--border-type) var(--border-color);
+
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    
+
+    height: 200px;
+    width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+
+    z-index: 100;
+}
+
+button {
+    background: none;
+    color: var(--color1);
+
+    font-size: 50px;
+
+    border: none;
+
+    position: relative;
+    z-index: 999;
+
+    transition: transform 0.3s, color 0.3s;
+}
+
+button:hover {
+    color: var(--color2);
+    cursor: pointer;
+}
+
+#score {
+    font-size: 50px;
+    color: var(--color1);
+
+    align-self: flex-start;
+
+    margin: 0;
+    left: 10px;
+    top: 10px;
+    z-index: 1;
+}
+
+.wasp {
+    position: absolute;
+    z-index: 25;
+}
+
+#bee {
+    position: absolute;
+    z-index: 50;
+    max-height: 50px;
+}

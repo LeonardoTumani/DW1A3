@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'gilroy-regular';
+    src: url('../Components/fonts/Gilroy-Regular.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'xpix';
+    src: url('../Components/fonts/Xpix.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
