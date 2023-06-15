@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Wasp War</title>
+    <link rel='stylesheet' href='./Styles/style.css'>
+    <link rel='stylesheet' href='./Styles/fonts.css'>
+    <link rel='icon' href='./Components/images/bee.png'>
+</head>
+<body>
+    <div id='screen'>
+        <div class='start-screen active'>
+            <p>The wasps have <span>declared</span></p>
+            <p><span>war</span> on your hive!</p>
+            <p>Stay alive as much as you can.</p>
+            <button id='start-button' onclick= startGame()>START GAME</button>
+        </div>
+    
+        <div class='restart-screen'>
+            <p id='p1'>You died!</p>
+            <p id='restart-score'>Your score: 0</p>
+            <button id='restart-button' onclick= startGame()>RESTART GAME</button>
+        </div>
+
+        <img id='bee' src='./Components/images/bee.png'>
+        <p id='score'>Score: 0</h1>
+    </div>
+
+    <script src='./Components/script.js'></script>
+</body>
+</html>
