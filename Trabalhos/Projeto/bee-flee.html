@@ -3,9 +3,8 @@
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Wasp War</title>
+    <title>Bee Flee</title>
     <link rel='stylesheet' href='./Styles/style.css'>
-    <link rel='stylesheet' href='./Styles/media.css'>
     <link rel='stylesheet' href='./Styles/fonts.css'>
     <link rel='icon' href='./Components/images/bee-gif.gif'>
 </head>
@@ -15,21 +14,33 @@
             <p>The wasps have</p>
             <p>invaded your hive!</p>
             <p>Flee for your life!</p>
-            <button id='start-button' onclick= startGame()>START GAME</button>
+            <button id='start-button' button-type='start' onclick=startGame()>START GAME</button>
         </div>
     
         <div id='restart-screen'>
             <p><span>YOU DIED</span></p>
-            <button id='restart-button' onclick= startGame()>RESTART GAME</button>
+            <button id='restart-button' button-type='restart' onclick=startGame()>RESTART GAME</button>
             <p id='top-score'>Your top score: 0</p>
             <p id='restart-score'>Your score: 0</p>
         </div>
 
         <img id='bee'>
+
         <p id='score' class='score'>Score: 0</h1>
+
+        <div id='lower-right-panel'>
+            <p id='fps-counter'>FPS: 0</p>
+
+            <div id=quality-div>            
+                <p>Quality: </p>
+                <button id='button-quality-low' onclick="adjustQuality('low')">Low</button>
+                <button id='button-quality-high' onclick="adjustQuality('high')">High</button>
+            </div>
+        </div>
     </div>
 
     <script src='./Scripts/deviceSetting.js'></script>
+    <script src='./Scripts/qualitySettings.js'></script>
     <script src='./Scripts/gameFunctions.js'></script>
     <script src='./Scripts/gameSetup.js'></script>
     <script src='./Scripts/inGameFunctions.js'></script>
