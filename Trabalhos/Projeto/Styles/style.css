@@ -5,6 +5,7 @@
     --border-type: outset;
     --color1: black;
     --color2: #b10000;
+    --color3: #ffd79c;
 }
 
 * {
@@ -29,12 +30,11 @@ p {
 }
 
 #p1 {
-    color: var(--color2);
     font-size: 50px;
 }
 
 span {
-    color: var(--color2);
+    color: var(--color1);
 }
 
 #screen {
@@ -48,28 +48,18 @@ span {
     align-items: center;
 }
 
-.start-screen.active, .restart-screen.active{
-    opacity: 1;
-    visibility: visible;
+.active {
+    opacity: 1 !important; 
+    visibility: visible !important; 
 }
 
-.start-screen, .restart-screen {
-    background-color: var(--fill-color);
-    border-color: var(--border-color);
+#start-screen, #restart-screen {
     color: var(--color);
 
-    font-size: 30px;
+    background-image: url('../Components/images/modal.png');
+    background-repeat: no-repeat;
 
-    border-radius: 15px;
-    border: var(--border-radius) var(--border-type) var(--border-color);
-
-    padding-top: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
-    
-
-    height: 200px;
-    width: 300px;
+    background-size: cover;
 
     display: flex;
     flex-direction: column;
@@ -86,9 +76,7 @@ span {
 
 button {
     background: none;
-    color: var(--color1);
-
-    font-size: 50px;
+    color: var(--color3);
 
     border: none;
 
@@ -103,13 +91,15 @@ button:hover {
     cursor: pointer;
 }
 
-#score {
-    font-size: 50px;
+.score {
     color: var(--color1);
 
     align-self: flex-start;
 
-    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+
+    margin-top: 1vw;
     left: 10px;
     top: 10px;
     z-index: 1;
@@ -123,5 +113,4 @@ button:hover {
 #bee {
     position: absolute;
     z-index: 50;
-    max-height: 50px;
 }
