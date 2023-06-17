@@ -12,7 +12,6 @@ var score = 0
 var scoreToEarn
 var scoreShown
 var scoreText = document.getElementById('score')
-var restartScoreText = document.getElementById('restart-score')
 
 function updateScore() {
     scoreToEarn = 100 / (screenHeight * 1.5)
