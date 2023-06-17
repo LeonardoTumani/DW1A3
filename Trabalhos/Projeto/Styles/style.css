@@ -10,9 +10,14 @@
 
 * {
     user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
     font-family: xpix;
     font-weight: 1;
     font-weight: 1000;
+    align-items: center;
 }
 
 html, body {
@@ -29,8 +34,8 @@ p {
     margin: 0;
 }
 
-#p1 {
-    font-size: 50px;
+button {
+    padding: 0;
 }
 
 span {
@@ -74,7 +79,7 @@ span {
     z-index: 100;
 }
 
-button {
+#start-button, #restart-button {
     background: none;
     color: var(--color3);
 
@@ -82,11 +87,9 @@ button {
 
     position: relative;
     z-index: 999;
-
-    transition: transform 0.3s, color 0.3s;
 }
 
-button:hover {
+#start-button:hover, #restart-button:hover{
     color: var(--color2);
     cursor: pointer;
 }
@@ -105,12 +108,52 @@ button:hover {
     z-index: 1;
 }
 
+#lower-right-panel {
+    position: absolute;
+    align-self: flex-end;
+    right: 1vw;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: end;
+    align-items: end;
+}
+
+#quality-div {
+    display: flex;
+    flex-direction: row;
+}
+
+#button-quality-low, #button-quality-high {
+    margin-left: 1vw;
+    background: none;
+    border: none;
+}
+
+#button-quality-low:hover, #button-quality-high:hover {
+    color: var(--color2);
+    cursor: pointer;
+}
+
+#fps-counter {
+    opacity: 0;
+    visibility: hidden;
+
+    margin: 0;
+    padding: 0;
+
+    right: 1vw;
+}
+
 .wasp {
     position: absolute;
     z-index: 25;
+    border-radius: 100%;
 }
 
 #bee {
     position: absolute;
     z-index: 50;
+    border-radius: 100%;
 }

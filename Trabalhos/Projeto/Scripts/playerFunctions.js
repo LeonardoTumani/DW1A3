@@ -1,3 +1,5 @@
+var bee = document.getElementById('bee')
+
 // Player dimensions
 var beeHeight = 50
 var beeWidth = 50
@@ -20,9 +22,19 @@ var beeWidth = 50
 
 
 // Detect player click
-document.addEventListener('mousedown', (e) => {
+screen.addEventListener('mousedown', (e) => {
     if (e.repeat) return
     beeSpeedY = upSpeed
+})
+
+buttonQualityLow.addEventListener('mousedown', (e) => {
+    if (e.repeat) return
+    e.stopPropagation();
+})
+
+buttonQualityHigh.addEventListener('mousedown', (e) => {
+    if (e.repeat) return
+    e.stopPropagation();
 })
 
 // Detect player key press and disable it
@@ -35,6 +47,10 @@ function movePlayer() {
     limitSpeed()
     limitPosition()
     updateCoordinates()
+
+    if (qualityOnSwitch == true || spriteRotateTransition == true) {
+        rotateSprite(bee, beeSpeedY)
+    }
 }
 
 function limitSpeed() {

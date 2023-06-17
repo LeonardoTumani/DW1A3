@@ -5,6 +5,8 @@ var bee = document.getElementById('bee')
 var screen = document.getElementById('screen')
 var startScreen = document.getElementById('start-screen')
 var restartScreen = document.getElementById('restart-screen')
+var buttonQualityLow = document.getElementById('button-quality-low')
+var buttonQualityHigh = document.getElementById('button-quality-high')
 
 // NodeLists of the game
 var p = document.querySelectorAll('p')
@@ -30,8 +32,6 @@ var fontSizeMultiplier
 
 // Adjusts the screen every game tic
 function adjustScreen() {
-    adjustDevice()
-
     screenHeight = screen.clientHeight
     screenWidth = screen.clientWidth
     screenOffsetTop = 10
@@ -39,8 +39,10 @@ function adjustScreen() {
     screenBottom = -4
 
     // Moves the background slightly to the left every game tic
-    positionX -= 2
-    screen.style.backgroundPosition = positionX + 'px 0px'
+    if (qualityOnSwitch == true) { 
+        positionX -= 2
+        screen.style.backgroundPosition = positionX + 'px 0px'
+    }
 
     if (screenHeight > screenWidth) {
         ratio = screenHeight / screenWidth
@@ -62,6 +64,9 @@ function adjustScreen() {
     setNodeElementsSize(span, 0.7)
     setNodeElementsSize(button, 0.6)
 
+    buttonQualityLow.style.fontSize = ratio * 0.5 + VHorVW
+    buttonQualityHigh.style.fontSize = ratio * 0.5 + VHorVW
+
     scoreText.style.fontSize = ratio * 0.7 + VHorVW
 }
 
@@ -75,11 +80,13 @@ var gameReset = false
 
 // Sets the screen once the game is started
 function setScreen() {
+    adjustDevice()
     adjustScreen()
+    adjustQuality(qualitySet)
 
     bee.style.width = beeWidth + 'px'
     bee.style.bottom = screenBottom + 'px'
-    bee.src = './Components/images/bee-gif.gif'
+    bee.src = beeImageSource
     beeY = screenBottom
 }
 
