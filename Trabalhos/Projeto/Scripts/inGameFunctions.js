@@ -6,12 +6,17 @@ var gameUpdateMs = 10
    and how hard it is to lift off */
 var groundHardness = 2
 
+// Bee health points
+var beeHP = 5
+
 
 
 var score = 0
 var scoreToEarn
 var scoreShown
 var scoreText = document.getElementById('score')
+
+var hpBar = document.getElementById('hp-bar')
 
 function updateScore() {
     scoreToEarn = 100 / (screenHeight * 1.5)
@@ -25,12 +30,10 @@ var collisionWasp
 var collisionWaspID
 var collisionWaspRect
 
-var topCollisionOffset = 15
-var bottomCollisionOffset = 15
-var leftCollisionOffset = 10
-var rightCollisionOffset = 10
-
-
+var topCollisionOffset = 10
+var bottomCollisionOffset = 10
+var leftCollisionOffset = 5
+var rightCollisionOffset = 5
 
 function detectCollision() {
     howManyWasps = arrayWasps.length
@@ -46,6 +49,15 @@ function detectCollision() {
 
         if (collisionX && collisionY) {
             collisionWasp.src = angryWaspImageSource
+            
+            beeHP--
+            beeHP = Math.max(beeHP, 0)
+
+            hpBarImageSource = './Components/images/hp/' + beeHP + '.png'
+            hpBar.src = hpBarImageSource
+        }
+
+        if (beeHP < 1) {
             bee.src = sadBeeImageSource
             gameOver()
         }

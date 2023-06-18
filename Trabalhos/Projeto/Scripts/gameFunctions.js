@@ -1,9 +1,13 @@
+var gameReset = false
+
 function startGame() {
     setScreen()
     adjustDevice()
 
+    document.getElementById('pause').classList.add('active')
     document.getElementById('score').classList.add('active')
     document.getElementById('fps-counter').classList.add('active')
+    document.getElementById('lower-right-panel').classList.add('active')
     
     if (gameReset == false) {
         document.getElementById('start-screen').classList.remove('active')
@@ -23,13 +27,15 @@ function gameUpdate() {
     gameUpdateCount++
 
     adjustScreen()
+
     updateScore()
+    calculateFPS()
+
     movePlayer()
     spawnWasp()
     moveWasps()
     despawnWasps()
     detectCollision()
-    calculateFPS()
 }
 
 function gameOver() {
@@ -37,8 +43,11 @@ function gameOver() {
     recordUpdate()
 
     document.getElementById('restart-screen').classList.add('active')
+
+    document.getElementById('pause').classList.remove('active')
     document.getElementById('score').classList.remove('active')
     document.getElementById('fps-counter').classList.remove('active')
+    document.getElementById('lower-right-panel').classList.remove('active')
 }
 
 var record = localStorage.getItem('record')
