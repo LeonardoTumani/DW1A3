@@ -4,7 +4,7 @@
     --border-radius: 5px;
     --border-type: outset;
     --color1: black;
-    --color2: #b10000;
+    --color2: #6d0000;
     --color3: #ffd79c;
 }
 
@@ -94,6 +94,27 @@ span {
     cursor: pointer;
 }
 
+#pause {
+    color: var(--color1);
+
+    margin: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+
+    background: none;
+    border: none;
+}
+
+#pause:hover {
+    cursor: pointer;
+    color: var(--color2);
+}
+
 .score {
     color: var(--color1);
 
@@ -102,9 +123,7 @@ span {
     opacity: 0;
     visibility: hidden;
 
-    margin-top: 1vw;
-    left: 10px;
-    top: 10px;
+    top: 1vw;
     z-index: 1;
 }
 
@@ -115,6 +134,9 @@ span {
 
     display: flex;
     flex-direction: column;
+
+    opacity: 0;
+    visibility: hidden;
 
     justify-content: end;
     align-items: end;
@@ -129,10 +151,11 @@ span {
     margin-left: 1vw;
     background: none;
     border: none;
+
+    color: var(--color1);
 }
 
 #button-quality-low:hover, #button-quality-high:hover {
-    color: var(--color2);
     cursor: pointer;
 }
 
@@ -152,8 +175,12 @@ span {
     border-radius: 100%;
 }
 
+#hp-bar {
+    position: absolute;
+    z-index: 50;
+}
+
 #bee {
     position: absolute;
     z-index: 50;
-    border-radius: 100%;
 }

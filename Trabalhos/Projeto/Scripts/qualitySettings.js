@@ -8,6 +8,8 @@ var waspImageSource = './Components/images/wasp-gif.gif'
 var sadBeeImageSource = './Components/images/sad-bee-gif.gif'
 var angryWaspImageSource = './Components/images/angry-wasp-gif.gif'
 
+var redColor = '#6d0000'
+
 
 
 function adjustQuality(quality) {
@@ -16,7 +18,7 @@ function adjustQuality(quality) {
     }
 
     if (quality == 'low') {
-        buttonQualityLow.style.color = '#b10000'
+        buttonQualityLow.style.color = redColor
         buttonQualityHigh.style.color = '#000000'
 
         beeImageSource = './Components/images/bee.png'
@@ -30,7 +32,7 @@ function adjustQuality(quality) {
         localStorage.setItem('quality', qualitySet)
     } else if (quality == 'high') {
         buttonQualityLow.style.color = '#000000'
-        buttonQualityHigh.style.color = '#b10000'
+        buttonQualityHigh.style.color = redColor
 
         beeImageSource = './Components/images/bee-gif.gif'
         sadBeeImageSource = './Components/images/sad-bee-gif.gif'

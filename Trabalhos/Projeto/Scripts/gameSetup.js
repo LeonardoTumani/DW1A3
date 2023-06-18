@@ -3,8 +3,11 @@ addEventListener('DOMContentLoaded', setScreen)
 // Elements of the game
 var bee = document.getElementById('bee')
 var screen = document.getElementById('screen')
+
 var startScreen = document.getElementById('start-screen')
 var restartScreen = document.getElementById('restart-screen')
+
+var buttonPause = document.getElementById('pause')
 var buttonQualityLow = document.getElementById('button-quality-low')
 var buttonQualityHigh = document.getElementById('button-quality-high')
 
@@ -13,6 +16,7 @@ var p = document.querySelectorAll('p')
 var span = document.querySelectorAll('span')
 var button = document.querySelectorAll('button')
 
+// Dimensions of the game
 var screenHeight
 var screenWidth
 var screenOffsetTop
@@ -64,6 +68,7 @@ function adjustScreen() {
     setNodeElementsSize(span, 0.7)
     setNodeElementsSize(button, 0.6)
 
+    buttonPause.style.fontSize = ratio * 0.7 + VHorVW
     buttonQualityLow.style.fontSize = ratio * 0.5 + VHorVW
     buttonQualityHigh.style.fontSize = ratio * 0.5 + VHorVW
 
@@ -76,7 +81,7 @@ function setNodeElementsSize(elementNodeList, fontSizeMultiplier) {
     })
 }
 
-var gameReset = false
+var hpBarOffset = 35
 
 // Sets the screen once the game is started
 function setScreen() {
@@ -84,10 +89,17 @@ function setScreen() {
     adjustScreen()
     adjustQuality(qualitySet)
 
+    beeHP = beeMaxHP
+
     bee.style.width = beeWidth + 'px'
     bee.style.bottom = screenBottom + 'px'
     bee.src = beeImageSource
     beeY = screenBottom
+
+    hpBar.style.width = beeWidth + 'px'
+    hpBar.style.bottom = beeY + hpBarOffset + 'px'
+    hpBar.style.left = beeX + 'px'
+    hpBar.src = './Components/images/hp/10.png'
 }
 
 var gameUpdateIntervalID

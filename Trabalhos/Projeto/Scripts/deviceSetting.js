@@ -20,8 +20,10 @@ function adjustDevice() {
 
         screen.style.backgroundSize = '150px'
 
-        bee.style.left = '5px'
+        beeX = 5
     } else {
-        bee.style.left = '50px'
+        beeX = 100
     }
+    
+    bee.style.left = beeX + 'px'
 }
