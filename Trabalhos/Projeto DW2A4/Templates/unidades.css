@@ -1,0 +1,57 @@
+.pagina-unidades {
+    display: flex;
+    flex-direction: row;
+    padding-top: 5px;
+    background-color: var(--light-gray);
+    height: 100%;
+}
+
+.sub-pagina-unidades {
+    margin: 30px;
+    width: 100%;
+}
+
+/* #div-unidades {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 30px;
+    margin-bottom: 50px;
+} */
+
+#div-unidades {
+    display: flex;
+    flex-direction: column;
+    margin-right: 60px;
+}
+
+.unidade-horizontal-div {
+    display: flex;
+    overflow-x: scroll;
+}
+
+.unidade {
+    border-radius: var(--border-radius);
+    background-color: var(--white);
+    padding: 10px;
+    margin: 10px;
+    font-weight: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 250px;
+    height: 50px;
+}
+
+.pais {
+    margin-bottom: 25px;
+}
+
+.p-nome-pais {
+    font-size: 20px;
+}
+
+.endereco-unidade {
+    text-align: justify;
+    color: var(--dark-gray);
+}

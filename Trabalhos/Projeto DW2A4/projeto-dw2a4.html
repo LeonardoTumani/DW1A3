@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.min.js"></script>
+
+    <link rel="stylesheet" href="Styles/Sheets/elements.css">
+    <link rel="stylesheet" href="Styles/Sheets/media.css">
+    <link rel="stylesheet" href="Styles/Sheets/modalCadastro.css">
+    <link rel="stylesheet" href="Styles/Sheets/root.css">
+    <link rel="stylesheet" href="Styles/Sheets/text.css">
+    <link rel="stylesheet" href="Styles/Sheets/ui.css">
+
+
+    <link rel="stylesheet" href="Styles/Fonts/fonts.css">
+
+    <link rel="stylesheet" href="Templates/cardapio.css">
+    <link rel="stylesheet" href="Templates/historia.css">
+    <link rel="stylesheet" href="Templates/inicio.css">
+    <link rel="stylesheet" href="Templates/unidades.css">
+
+    <link rel='icon' href='./Styles/Components/logo.png'>
+    <title>Gatatouille</title>
+</head>
+<body ng-app="App">
+    <div id="banner">
+        <div id="div-gatatouille">
+            <img id="logo-gatatouille" src="./Styles/Components/logo.svg">
+
+            <div>
+                <h2 id="h2-gatatouille">Restaurante Gatatouille</h2>
+                <h3 id="h3-comment">"Noss que comid gustosa oui oui!" - Érick Jacquin</h3>
+            </div>
+        </div>
+
+        <div id="div-cadastro-banner" onclick="cadastroSample.abrirCadastro()">
+            <img id="foto-perfil" src="./Styles/Components/login.svg">
+            <p id="p-cadastro">Cadastro</p>
+        </div>
+    </div>
+
+    <div id="navigation-bar">
+        <div class="link">
+            <a class="header-link" href="#/inicio/">Início</a>
+        </div>
+
+        <div class="link">
+            <a class="header-link" href="#/cardapio">Cardápio</a>
+        </div>
+
+        <div class="link">
+            <a class="header-link" href="#/unidades">Unidades</a>
+        </div>
+
+        <div class="link">
+            <a class="header-link" href="#/historia">História</a>
+        </div>
+    </div>
+
+    <div ng-view></div>
+
+    <footer>
+        <div id="socials-div">
+            <h3 id="nossas-redes-sociais">Nossas redes sociais:</h3>
+
+            <div>
+                <a class="social-link" href="https://facebook.com"><img class="social-icon" id="icon-facebook" src="./Styles/Components/icon-facebook.svg"></a>
+                <a class="social-link" href="https://instagram.com"><img class="social-icon" id="icon-instagram" src="./Styles/Components/icon-instagram.svg"></a>
+                <a class="social-link" href="https://twitter.com"><img class="social-icon" id="icon-twitter" src="./Styles/Components/icon-twitter.svg"></a>
+            </div>
+        </div>
+
+        <div id="contacts-div">
+            <h3 id="fale-conosco">Fale conosco</h3>
+
+            <div id="contacts">
+                <div class="contacts-column">
+                    <div class="contact" id="phone">
+                        <img class="footer-icon" src="./Styles/Components/phone.svg">
+                        <p href="">111-222-333</p>
+                    </div>
+
+                    <div class="contact" id="email">
+                        <img class="footer-icon" src="./Styles/Components/email.svg">
+                        <p href="">gatatouille@email.com</p>
+                    </div>
+                </div>
+
+                <div class="contacts-column" id="last-contacts-column">
+                    <div class="contact" id="sac">
+                        <img class="footer-icon" src="./Styles/Components/phone.svg">
+                        (SAC) 222-333-444 
+                    </div>
+
+                    <div class="contact" id="faq">
+                        <img class="footer-icon" src="./Styles/Components/faq.svg">
+                        <a class="contact-link" href="">FAQ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <h1 id="cu"></h1>
+
+    <div id="modal-overlay">
+        <div id="modal-cadastro">
+            <div id="modal-banner">
+                <img id="logo-gatatouille-modal-banner" src="./Styles/Components/logo.svg">
+            </div>
+
+            <div id="modal-body">
+                <h2 id="h2-cadastro" class="h2-titulo">Seu cadastro</h2>
+
+
+                    <div id="div-cadastro">
+                        <form id='form-cadastro'>
+                            <div id="basic-info">
+                                <input id="input-nome" type="text" placeholder="Nome">
+                                <input id="input-telefone" type="text" placeholder="Telefone">
+                            </div>
+        
+                            <div id="adress-info">
+                                <input id="input-logradouro" type="text" placeholder="Logradouro">
+                                <input id="input-numero" type="text" placeholder="N.º">
+                                <input id="input-complemento" placeholder="Complemento">
+                                <input id="input-bairro" type="text" placeholder="Bairro">
+                            </div>
+        
+                            <div id="cep-info">
+                                <input id="input-cidade" type="text" placeholder="Cidade">
+                                <input id="input-estado" type="text" placeholder="Estado">
+                                <input id="input-pais" type="text" placeholder="País">
+                            </div>
+        
+                            <div id="div-submit">
+                                <div id="div-salvo">
+                                    <input id="input-submit" type="submit" value="Salvar cadastro">
+                                    <p id='p-salvo'>Cadastro salvo!</p>
+                                </div>
+
+                                <div id="div-removido">
+                                    <p id='p-removido'>Cadastro removido!</p>
+                                    <p id="p-remover-cadastro">Remover cadastro</p>      
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./Scripts/angular.js"></script>
+    <script src="./Scripts/Classes/Cadastro.js"></script>
+    <script src="./Scripts/Classes/Carrinho.js"></script>
+    <script src="./Scripts/Classes/Prato.js"></script>
+    <script src="./Scripts/Classes/Unidade.js"></script>
+
+    <script src="./Scripts/ui.js"></script>
+    <script src="./Scripts/script.js"></script>
+    <script src="./Scripts/eventListeners.js"></script>
+</body>
+</html>

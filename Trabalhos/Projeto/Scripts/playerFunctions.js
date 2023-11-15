@@ -41,7 +41,6 @@ var pauseOn = true
 
 // Detects player clicking the pause button
 buttonPause.addEventListener('mousedown', (e) => {
-    if (e.repeat) return
     if (e.button !== 0) {
         e.preventDefault
         return
@@ -66,7 +65,6 @@ buttonPause.addEventListener('mousedown', (e) => {
 
 // Block clicks on buttons to move the bee
 buttonQualityLow.addEventListener('mousedown', (e) => {
-    if (e.repeat) return
     if (e.button !== 0) {
         e.preventDefault
         return
@@ -76,7 +74,6 @@ buttonQualityLow.addEventListener('mousedown', (e) => {
 })
 
 buttonQualityHigh.addEventListener('mousedown', (e) => {
-    if (e.repeat) return
     if (e.button !== 0) {
         e.preventDefault
         return
@@ -88,11 +85,6 @@ buttonQualityHigh.addEventListener('mousedown', (e) => {
 // Detect player key press and disable it
 document.addEventListener('keydown', (e) => {
     if (e.repeat) return
-    if (e.button !== 0) {
-        e.preventDefault
-        return
-    }
-    
     e.preventDefault()
 })
 
