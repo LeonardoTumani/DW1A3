@@ -1,0 +1,42 @@
+.pagina-inicio {
+    display: flex;
+    flex-direction: row;
+    padding-top: 5px;
+    background-color: var(--light-gray);
+    height: 100%;
+}
+
+.sub-pagina-inicio {
+    margin: 30px;
+    width: 100%;
+    display: flex;
+}
+
+.div-inicio {
+    width: 400px;
+    height: 300px;
+    background-color: var(--almost-white);
+    border-radius: var(--border-radius);
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-div-inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.link-inicio {
+    color: var(--main-color4);
+    text-align: right;
+}
+
+.imagem-inicio {
+    margin: 40px;
+    width: 100px;
+    height: 100px;
+}
