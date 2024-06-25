@@ -1,6 +1,6 @@
 /* How many miliseconds it takes the game to update and try spawning
    a new wasp */
-var gameUpdateMs = 5
+var gameUpdateMs = 10
 
 /* Defines how much the player will bounce after hitting the ground
    and how hard it is to lift off */

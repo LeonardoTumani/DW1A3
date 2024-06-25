@@ -6,7 +6,6 @@ function startGame() {
 
     document.getElementById('pause').classList.add('active')
     document.getElementById('score').classList.add('active')
-    document.getElementById('fps-counter').classList.add('active')
     document.getElementById('lower-right-panel').classList.add('active')
     
     if (gameReset == false) {
@@ -27,10 +26,7 @@ function gameUpdate() {
     gameUpdateCount++
 
     adjustScreen()
-
     updateScore()
-    calculateFPS()
-
     movePlayer()
     spawnWasp()
     moveWasps()
@@ -46,7 +42,6 @@ function gameOver() {
 
     document.getElementById('pause').classList.remove('active')
     document.getElementById('score').classList.remove('active')
-    document.getElementById('fps-counter').classList.remove('active')
     document.getElementById('lower-right-panel').classList.remove('active')
 }
 
