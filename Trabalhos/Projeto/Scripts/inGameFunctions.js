@@ -28,6 +28,7 @@ function updateScore() {
 
 var collisionWasp
 var collisionWaspID
+var collisionWaspType
 var collisionWaspRect
 
 var topCollisionOffset = 10
@@ -41,6 +42,7 @@ function detectCollision() {
     for (ic = 0; ic < howManyWasps; ic++) {
         collisionWasp = document.getElementById(arrayWasps[ic])
         collisionWaspID = collisionWasp.id
+        collisionWaspType = dictWaspType[collisionWaspID]
 
         collisionWaspRect = collisionWasp.getBoundingClientRect()
 
@@ -48,8 +50,12 @@ function detectCollision() {
         var collisionY = (beeRect.top + topCollisionOffset <= collisionWaspRect.top + collisionWaspRect.height - topCollisionOffset) && (beeRect.top + beeRect.height - bottomCollisionOffset >= collisionWaspRect.top + bottomCollisionOffset);
 
         if (collisionX && collisionY) {
-            collisionWasp.src = angryWaspImageSource
-            
+            if (collisionWaspType == 'soldierWasp') {
+                collisionWasp.src = angrySoldierWaspImageSource
+            } else {
+                collisionWasp.src = angryWaspImageSource
+            }
+
             beeHP--
             beeHP = Math.max(beeHP, 0)
 
@@ -64,39 +70,12 @@ function detectCollision() {
     }
 }
 
-var fpsCounter = document.getElementById('fps-counter')
-
-function calculateFPS() {
-    var prevTime = Date.now()
-    var frames = 0
-
-    requestAnimationFrame(function loop() {
-        var time = Date.now()
-        frames++
-
-        if (time > prevTime + 1000) {
-            var fps = Math.round( ( frames * 1000 ) / ( time - prevTime ) )
-            prevTime = time
-            frames = 0
-
-            fpsCounter.textContent = 'FPS: ' + Math.round(fps / 5) * 5
-        }
-
-        requestAnimationFrame(loop)
-    })
-}
-
 var degree
 var spriteRotateTransition = false
 
 function rotateSprite(element, elementSpeedY) {
-    if (qualityOnSwitch == true) {
-        degree = Math.atan(elementSpeedY) * (180 / Math.PI)
-        degree = Math.floor(degree * -1) / 8
+    degree = Math.atan(elementSpeedY) * (180 / Math.PI)
+    degree = Math.floor(degree * -1) / 8
 
-        element.style.transform = 'rotate(' + degree + 'deg)'
-    } else {
-        element.style.transform = 'rotate(0deg)'
-        spriteRotateTransition = false
-    }
+    element.style.transform = 'rotate(' + degree + 'deg)'
 }

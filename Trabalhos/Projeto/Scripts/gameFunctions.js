@@ -3,6 +3,7 @@ var gameReset = false
 function startGame() {
     setScreen()
     adjustDevice()
+    turnSoundtrack()
 
     document.getElementById('pause').classList.add('active')
     document.getElementById('score').classList.add('active')

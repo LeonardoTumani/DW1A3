@@ -142,12 +142,12 @@ span {
     align-items: end;
 }
 
-#quality-div {
+#soundtrack-div {
     display: flex;
     flex-direction: row;
 }
 
-#button-quality-low, #button-quality-high {
+#button-soundtrack-on, #button-soundtrack-off {
     margin-left: 1vw;
     background: none;
     border: none;
@@ -155,7 +155,7 @@ span {
     color: var(--color1);
 }
 
-#button-quality-low:hover, #button-quality-high:hover {
+#button-soundtrack-on:hover, #button-soundtrack-off:hover {
     cursor: pointer;
 }
 

@@ -64,7 +64,7 @@ buttonPause.addEventListener('mousedown', (e) => {
 
 
 // Block clicks on buttons to move the bee
-buttonQualityLow.addEventListener('mousedown', (e) => {
+buttonSountrackOn.addEventListener('mousedown', (e) => {
     if (e.button !== 0) {
         e.preventDefault
         return
@@ -73,7 +73,7 @@ buttonQualityLow.addEventListener('mousedown', (e) => {
     e.stopPropagation()
 })
 
-buttonQualityHigh.addEventListener('mousedown', (e) => {
+buttonSountrackOff.addEventListener('mousedown', (e) => {
     if (e.button !== 0) {
         e.preventDefault
         return
@@ -93,9 +93,7 @@ function movePlayer() {
     limitPosition()
     updateCoordinates()
 
-    if (qualityOnSwitch == true || spriteRotateTransition == true) {
-        rotateSprite(bee, beeSpeedY)
-    }
+    rotateSprite(bee, beeSpeedY)
 }
 
 function limitSpeed() {

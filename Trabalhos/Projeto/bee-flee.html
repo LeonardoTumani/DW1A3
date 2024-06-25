@@ -35,16 +35,17 @@
 
         <div id='lower-right-panel'>
 
-            <div id=quality-div>            
-                <p>Quality: </p>
-                <button id='button-quality-low' onclick="adjustQuality('low')">Low</button>
-                <button id='button-quality-high' onclick="adjustQuality('high')">High</button>
+            <div id=soundtrack-div>            
+                <p>Soundtrack: </p>
+                <button id='button-soundtrack-on' onclick="turnSoundtrack('on')">On</button>
+                <button id='button-soundtrack-off' onclick="turnSoundtrack('off')">Off</button>
             </div>
         </div>
+
+        <audio id="soundtrack" src="Components/audios/soundtrack.mp3"></audio>
     </div>
 
     <script src='./Scripts/deviceSetting.js'></script>
-    <script src='./Scripts/qualitySettings.js'></script>
     <script src='./Scripts/gameFunctions.js'></script>
     <script src='./Scripts/gameSetup.js'></script>
     <script src='./Scripts/inGameFunctions.js'></script>

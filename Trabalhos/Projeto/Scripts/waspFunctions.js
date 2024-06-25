@@ -6,10 +6,18 @@ var randWaspSize
 var randWaspSpeedX
 var randWaspSpeedY
 
+var soldierWaspSpawnChance = 0.5
+
+// Function that spawns a different wasp randomly
+function spawnDifferentWasp(chance) {
+    return Math.random() < chance;
+}
+
 // IDs of the spawned and despawned wasps
 var spawnedWasp
 var spawnedWaspID
 var spawnedWaspSize
+var spawnedWaspType
 var spawnedWaspSpeedX
 var spawnedWaspSpeedY
 var despawnedWasp
@@ -18,6 +26,7 @@ var despawnedWaspID
 // Wasp counting variables
 var arrayWasps = []
 var dictWaspSize = {}
+var dictWaspType = {}
 var dictWaspSpeedX = {}
 var dictWaspSpeedY = {}
 var dictWaspPosition = {}
@@ -38,8 +47,6 @@ var screenBounds = 80
 // Max amount of wasps that can appear on the screen
 var maxWaspQuantity = 80
 
-// Properties of the wasp element
-var waspImageSource = './Components/images/wasp-gif.gif'
 
 
 function spawnWasp() {
@@ -56,7 +63,15 @@ function spawnWasp() {
 
         // Spawn next wasp
         spawnedWasp = document.createElement('img')
-        spawnedWasp.src = waspImageSource
+
+        if(spawnDifferentWasp(soldierWaspSpawnChance)) {
+            spawnedWasp.src = soldierWaspImageSource
+            spawnedWaspType = 'soldierWasp'
+        } else {
+            spawnedWasp.src = waspImageSource
+            spawnedWaspType = 'wasp'
+        }
+
         spawnedWasp.className = 'wasp'
         spawnedWaspID = spawnedWasp.id = 'wasp' + waspCounter
 
@@ -84,6 +99,7 @@ function spawnWasp() {
         dictWaspSpeedY[spawnedWaspID] = spawnedWaspSpeedY
         dictWaspPosition[spawnedWaspID] = randPosition
         dictWaspSize[spawnedWaspID] = spawnedWaspSize
+        dictWaspType[spawnedWaspID] = spawnedWaspType
     }
 }
 
@@ -113,9 +129,7 @@ function moveWasps() {
 
         dictWaspPosition[currentWaspID] = currentWaspY
 
-        if (qualityOnSwitch == true) {
-            rotateSprite(currentWasp, currentWaspSpeedY)
-        }
+        rotateSprite(currentWasp, currentWaspSpeedY)
     }
 }
 
@@ -146,6 +160,7 @@ function despawnWasps() {
             delete dictWaspSpeedY[despawnedWaspID]
             delete dictWaspPosition[despawnedWaspID]
             delete dictWaspSize[despawnedWaspID]
+            delete dictWaspType[despawnedWaspID]
 
             // Remove the wasp from the screen
             screen.removeChild(despawnedWasp)
@@ -167,6 +182,7 @@ function despawnAllWasps() {
         delete dictWaspSpeedY[deletedWaspID]
         delete dictWaspPosition[deletedWaspID]
         delete dictWaspSize[deletedWaspID]
+        delete dictWaspType[deletedWaspID]
 
         // Remove the wasp from the screen
         screen.removeChild(deletedWasp)

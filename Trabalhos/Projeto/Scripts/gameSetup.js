@@ -8,8 +8,19 @@ var startScreen = document.getElementById('start-screen')
 var restartScreen = document.getElementById('restart-screen')
 
 var buttonPause = document.getElementById('pause')
-var buttonQualityLow = document.getElementById('button-quality-low')
-var buttonQualityHigh = document.getElementById('button-quality-high')
+var buttonSountrackOn = document.getElementById('button-soundtrack-on')
+var buttonSountrackOff = document.getElementById('button-soundtrack-off')
+
+var soundtrack = document.getElementById('soundtrack')
+
+// Image sources
+var beeImageSource = './Components/images/bee-gif.gif'
+var waspImageSource = './Components/images/wasp-gif.gif'
+var soldierWaspImageSource = './Components/images/soldier-wasp-gif.gif'
+
+var sadBeeImageSource = './Components/images/sad-bee-gif.gif'
+var angryWaspImageSource = './Components/images/angry-wasp-gif.gif'
+var angrySoldierWaspImageSource = './Components/images/angry-soldier-wasp-gif.gif'
 
 // NodeLists of the game
 var p = document.querySelectorAll('p')
@@ -34,6 +45,36 @@ var fontSizeMultiplier
 
 
 
+// Soundtrack setup
+var soundtrackSet = localStorage.getItem('soundtrack')
+var redColor = '#6d0000'
+
+function turnSoundtrack(option) {
+    if (option == 'off') {
+        buttonSountrackOff.style.color = redColor
+        buttonSountrackOn.style.color = '#000000'
+
+        soundtrackSet = 'off'
+        localStorage.setItem('soundtrack', soundtrackSet)
+        soundtrack.pause()
+    } else if (option == 'on') {
+        buttonSountrackOn.style.color = redColor
+        buttonSountrackOff.style.color = '#000000'
+
+        soundtrackSet = 'on'
+        localStorage.setItem('soundtrack', soundtrackSet)
+        soundtrack.play()
+    } else {
+        if (soundtrackSet == null) {
+            turnSoundtrack('on')
+        } else {
+            turnSoundtrack(soundtrackSet)
+        }
+    }
+}
+
+
+
 // Adjusts the screen every game tic
 function adjustScreen() {
     screenHeight = screen.clientHeight
@@ -43,10 +84,8 @@ function adjustScreen() {
     screenBottom = -4
 
     // Moves the background slightly to the left every game tic
-    if (qualityOnSwitch == true) { 
-        positionX -= 2
-        screen.style.backgroundPosition = positionX + 'px 0px'
-    }
+    positionX -= 2
+    screen.style.backgroundPosition = positionX + 'px 0px'
 
     if (screenHeight > screenWidth) {
         ratio = screenHeight / screenWidth
@@ -69,8 +108,8 @@ function adjustScreen() {
     setNodeElementsSize(button, 0.6)
 
     buttonPause.style.fontSize = ratio * 0.7 + VHorVW
-    buttonQualityLow.style.fontSize = ratio * 0.5 + VHorVW
-    buttonQualityHigh.style.fontSize = ratio * 0.5 + VHorVW
+    buttonSountrackOn.style.fontSize = ratio * 0.5 + VHorVW
+    buttonSountrackOff.style.fontSize = ratio * 0.5 + VHorVW
 
     scoreText.style.fontSize = ratio * 0.7 + VHorVW
 }
@@ -87,7 +126,7 @@ var hpBarOffset = 35
 function setScreen() {
     adjustDevice()
     adjustScreen()
-    adjustQuality(qualitySet)
+    turnSoundtrack()
 
     beeHP = beeMaxHP
 
@@ -100,6 +139,10 @@ function setScreen() {
     hpBar.style.bottom = beeY + hpBarOffset + 'px'
     hpBar.style.left = beeX + 'px'
     hpBar.src = './Components/images/hp/10.png'
+}
+
+function playSoundtrack() {
+    soundtrack.play()
 }
 
 var gameUpdateIntervalID
